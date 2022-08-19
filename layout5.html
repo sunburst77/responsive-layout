@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>layout5</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reset-css@5.0.1/reset.min.css">
+  <style>
+    #wrap { width: 1200px; margin: 0 auto; }
+    .header { width: 100%; height: 150px;  background: #80d7ff;}
+    .aside { width: 30%; height: 600px; background: #6bb2d3; float: left;}
+    .article1 { width: 70%; height: 200px; float: left; background: #87c3fc; }
+    .article2 { width: 70%; height: 200px; float: left; background: #69b6ff; }
+    .article3 { width: 70%; height: 200px; float: left; background: #47a5fd; }
+    .footer { clear:both; width: 100%; height: 150px; background: #256380; }
+
+    @media only all and (max-width: 1240px) {
+      #wrap { width: 100%; }
+      .article1, .article2 { height: 300px; }
+      .article3 { width: 100%; height: 200px; }
+    }
+    @media only all and (max-width: 768px) {
+      #wrap { width: 100%; }
+      .aside { width: 100%; height: 150px; }
+      .article1, .article2 { width: 50%; height: 300px; }
+    }
+    @media only all and (max-width: 480px) {
+      #wrap { width: 100%; }
+      .aside { float: none; width: 100%; height: 300px; }
+      .article1, .article2, .article3 { width: 100%; height: 300px; }
+    }
+  </style>
+</head>
+<body>
+  <div id="wrap">
+    <header class="header"></header>
+    <aside class="aside"></aside>   
+    <section class="article1"></section>
+    <section class="article2" ></section>
+    <section class="article3"></section>      
+    <footer class="footer"></footer>
+  </div>
+</body>
+</html>
